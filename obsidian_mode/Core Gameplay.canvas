@@ -1,17 +1,21 @@
 {
 	"nodes":[
-		{"id":"5ae80cfc5825d343","x":-220,"y":-200,"width":250,"height":60,"color":"#7d7d7d","type":"text","text":"MODE: Modular Operational Destabilized Environments"},
-		{"id":"8d81a59ac0ab4a56","x":-600,"y":-305,"width":250,"height":60,"color":"#0055ff","type":"text","text":"Underwater Slowed"},
-		{"id":"7f8b5bca5786bc11","x":157,"y":-305,"width":250,"height":60,"color":"4","type":"text","text":"Grassy Overgrown "},
-		{"id":"9f0317dcabbfc5c8","x":157,"y":-87,"width":250,"height":60,"color":"5","type":"text","text":"Icy Slippery"},
-		{"id":"69cc84b3da367974","x":-600,"y":-87,"width":250,"height":60,"color":"2","type":"text","text":"Desert Heated"},
-		{"id":"1715fb1e328b2951","x":-600,"y":-200,"width":250,"height":60,"color":"#8000ff","type":"text","text":"Dwarven Hardened"},
-		{"id":"070fc5529d456572","x":157,"y":-200,"width":250,"height":60,"color":"1","type":"text","text":"Candy Sticky"},
-		{"id":"a5adb72805c36b69","x":-350,"y":-385,"width":250,"height":60,"color":"#ff00a2","type":"text","text":"Animal Crowded"},
-		{"id":"156a5c78d0d522cf","x":-93,"y":-385,"width":250,"height":60,"color":"#ffffff","type":"text","text":"Moon Antigravity"},
-		{"id":"bb2e47188305f19c","x":-350,"y":-17,"width":250,"height":60,"color":"#050505","type":"text","text":"Dark Hidden"},
-		{"id":"d28192f4af3e2ece","x":-93,"y":-17,"width":250,"height":60,"color":"3","type":"text","text":"Tower Windy"},
-		{"id":"da6a81ca8da196be","x":500,"y":-350,"width":120,"height":50,"type":"text","text":"Vines"}
+		{"id":"da6a81ca8da196be","x":500,"y":-350,"width":120,"height":50,"type":"text","text":"Vines"},
+		{"id":"5ae80cfc5825d343","x":-218,"y":-222,"width":250,"height":105,"color":"#7d7d7d","type":"text","text":"MODE: Modular Operational Destabilized Environments"},
+		{"id":"156a5c78d0d522cf","x":-80,"y":-384,"width":250,"height":60,"color":"#ffffff","type":"text","text":"Moon Antigravity, GravityGun"},
+		{"id":"d28192f4af3e2ece","x":-80,"y":-16,"width":250,"height":60,"color":"3","type":"text","text":"Tower Windy, FloatyUmbrella"},
+		{"id":"7f8b5bca5786bc11","x":170,"y":-304,"width":250,"height":60,"color":"4","type":"text","text":"Grassy Overgrown, DeathSickle"},
+		{"id":"070fc5529d456572","x":170,"y":-199,"width":250,"height":60,"color":"1","type":"text","text":"Candy Sticky, CorrosiveBombs"},
+		{"id":"9f0317dcabbfc5c8","x":170,"y":-86,"width":250,"height":60,"color":"5","type":"text","text":"Icy Slippery, HeavySledgehammer"},
+		{"id":"8d81a59ac0ab4a56","x":-620,"y":-304,"width":250,"height":60,"color":"#0055ff","type":"text","text":"Underwater Slowed, GrappleGun"},
+		{"id":"69cc84b3da367974","x":-620,"y":-86,"width":250,"height":60,"color":"2","type":"text","text":"Desert Heated, MetalDetector"},
+		{"id":"1715fb1e328b2951","x":-620,"y":-199,"width":250,"height":60,"color":"#8000ff","type":"text","text":"Dwarven Hardened, GoldenPickaxe"},
+		{"id":"a5adb72805c36b69","x":-370,"y":-384,"width":250,"height":60,"color":"#ff00a2","type":"text","text":"Animal Crowded, ShepherdsCane"},
+		{"id":"bb2e47188305f19c","x":-370,"y":-16,"width":250,"height":60,"color":"#050505","type":"text","text":"Dark Hidden, SpiritLantern"},
+		{"id":"b8bfa80c90c7cabc","x":-218,"y":240,"width":250,"height":60,"color":"5","type":"text","text":"Core Gameplay Loop"},
+		{"id":"1ec2fdcda0bf6932","x":100,"y":202,"width":250,"height":136,"color":"3","type":"text","text":"Normal day, go to sleep in familiar home. Wake up in strange bed unusual place. MODE begins."},
+		{"id":"dbe1b37a633ae6d3","x":420,"y":202,"width":250,"height":137,"color":"3","type":"text","text":"Begin exploring, find TOOL. Warping between MODEs reveals that your TOOL changes with each MODE."},
+		{"id":"a88180508e20a48f","x":100,"y":400,"width":250,"height":240,"type":"text","text":"When MODE begins, the world begins to shift every 4 seconds to a new MODE that reflects a new world. Puzzles can be solved multiple ways by trying different things in different MODEs."}
 	],
 	"edges":[
 		{"id":"c0acf9014cedd8a3","fromNode":"5ae80cfc5825d343","fromSide":"right","toNode":"7f8b5bca5786bc11","toSide":"left"},
@@ -24,6 +28,9 @@
 		{"id":"36423358dcebd865","fromNode":"5ae80cfc5825d343","fromSide":"top","toNode":"156a5c78d0d522cf","toSide":"bottom"},
 		{"id":"52b2c1698414e4b9","fromNode":"5ae80cfc5825d343","fromSide":"left","toNode":"1715fb1e328b2951","toSide":"right"},
 		{"id":"cce94ddcf44f2f3d","fromNode":"5ae80cfc5825d343","fromSide":"right","toNode":"070fc5529d456572","toSide":"left"},
-		{"id":"e7af578abdbb8540","fromNode":"7f8b5bca5786bc11","fromSide":"right","toNode":"da6a81ca8da196be","toSide":"left"}
+		{"id":"e7af578abdbb8540","fromNode":"7f8b5bca5786bc11","fromSide":"right","toNode":"da6a81ca8da196be","toSide":"left"},
+		{"id":"a1d68a904cedf8f7","fromNode":"b8bfa80c90c7cabc","fromSide":"right","toNode":"1ec2fdcda0bf6932","toSide":"left"},
+		{"id":"aa307e844f6bd61f","fromNode":"1ec2fdcda0bf6932","fromSide":"right","toNode":"dbe1b37a633ae6d3","toSide":"left"},
+		{"id":"971982afcdaaebb5","fromNode":"1ec2fdcda0bf6932","fromSide":"bottom","toNode":"a88180508e20a48f","toSide":"top"}
 	]
 }

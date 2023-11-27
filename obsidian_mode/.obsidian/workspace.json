@@ -8,14 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2016dc8dbc2241de",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
             "id": "f25a76e5f9cade53",
             "type": "leaf",
             "state": {
@@ -23,15 +15,14 @@
               "state": {
                 "file": "Core Gameplay.canvas",
                 "viewState": {
-                  "x": -72.63871251907908,
-                  "y": -64.87225787272872,
+                  "x": 704.6238438680728,
+                  "y": 331.7751614812252,
                   "zoom": -0.30000000000000004
                 }
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,8 +151,8 @@
   },
   "active": "f25a76e5f9cade53",
   "lastOpenFiles": [
-    "Untitled.md",
     "Core Gameplay.canvas",
+    "Untitled.md",
     "MODE Brainstorm.md"
   ]
 }
