@@ -16,7 +16,7 @@
                 "file": "Core Gameplay.canvas",
                 "viewState": {
                   "x": 61.666748046875,
-                  "y": 129.33331298828122,
+                  "y": -93.86670120239263,
                   "zoom": 0
                 }
               }
@@ -72,7 +72,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "74de196393a4598c",
