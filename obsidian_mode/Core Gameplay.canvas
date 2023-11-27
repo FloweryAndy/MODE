@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"5ae80cfc5825d343","x":-220,"y":-200,"width":250,"height":60,"color":"#7d7d7d","type":"text","text":"MODE: Modular Operational Destabilized Environments"},
+		{"id":"8d81a59ac0ab4a56","x":-600,"y":-305,"width":250,"height":60,"color":"#0055ff","type":"text","text":"Underwater Slowed"},
+		{"id":"7f8b5bca5786bc11","x":157,"y":-305,"width":250,"height":60,"color":"4","type":"text","text":"Grassy Overgrown "},
+		{"id":"9f0317dcabbfc5c8","x":157,"y":-87,"width":250,"height":60,"color":"5","type":"text","text":"Icy Slippery"},
+		{"id":"69cc84b3da367974","x":-600,"y":-87,"width":250,"height":60,"color":"2","type":"text","text":"Desert Heated"},
+		{"id":"1715fb1e328b2951","x":-600,"y":-200,"width":250,"height":60,"color":"#8000ff","type":"text","text":"Dwarven Hardened"},
+		{"id":"070fc5529d456572","x":157,"y":-200,"width":250,"height":60,"color":"1","type":"text","text":"Candy Sticky"},
+		{"id":"a5adb72805c36b69","x":-350,"y":-385,"width":250,"height":60,"color":"#ff00a2","type":"text","text":"Animal Crowded"},
+		{"id":"156a5c78d0d522cf","x":-93,"y":-385,"width":250,"height":60,"color":"#ffffff","type":"text","text":"Moon Antigravity"},
+		{"id":"bb2e47188305f19c","x":-350,"y":-17,"width":250,"height":60,"color":"#050505","type":"text","text":"Dark Hidden"},
+		{"id":"d28192f4af3e2ece","x":-93,"y":-17,"width":250,"height":60,"color":"3","type":"text","text":"Tower Windy"},
+		{"id":"da6a81ca8da196be","x":500,"y":-350,"width":120,"height":50,"type":"text","text":"Vines"}
+	],
+	"edges":[
+		{"id":"c0acf9014cedd8a3","fromNode":"5ae80cfc5825d343","fromSide":"right","toNode":"7f8b5bca5786bc11","toSide":"left"},
+		{"id":"88ec2e09ce47420b","fromNode":"5ae80cfc5825d343","fromSide":"right","toNode":"9f0317dcabbfc5c8","toSide":"left"},
+		{"id":"b85a046b9e7e8bf9","fromNode":"5ae80cfc5825d343","fromSide":"bottom","toNode":"d28192f4af3e2ece","toSide":"top"},
+		{"id":"3f2b067233e8a6fa","fromNode":"5ae80cfc5825d343","fromSide":"bottom","toNode":"bb2e47188305f19c","toSide":"top"},
+		{"id":"1c974a8aa6f41a68","fromNode":"5ae80cfc5825d343","fromSide":"left","toNode":"69cc84b3da367974","toSide":"right"},
+		{"id":"da636c23697492b7","fromNode":"5ae80cfc5825d343","fromSide":"left","toNode":"8d81a59ac0ab4a56","toSide":"right"},
+		{"id":"f770343a0701e7b0","fromNode":"5ae80cfc5825d343","fromSide":"top","toNode":"a5adb72805c36b69","toSide":"bottom"},
+		{"id":"36423358dcebd865","fromNode":"5ae80cfc5825d343","fromSide":"top","toNode":"156a5c78d0d522cf","toSide":"bottom"},
+		{"id":"52b2c1698414e4b9","fromNode":"5ae80cfc5825d343","fromSide":"left","toNode":"1715fb1e328b2951","toSide":"right"},
+		{"id":"cce94ddcf44f2f3d","fromNode":"5ae80cfc5825d343","fromSide":"right","toNode":"070fc5529d456572","toSide":"left"},
+		{"id":"e7af578abdbb8540","fromNode":"7f8b5bca5786bc11","fromSide":"right","toNode":"da6a81ca8da196be","toSide":"left"}
+	]
+}

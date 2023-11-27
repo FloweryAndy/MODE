@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "5f4786e3b073b440",
+    "type": "split",
+    "children": [
+      {
+        "id": "0e9945956121d46c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2016dc8dbc2241de",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "f25a76e5f9cade53",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Core Gameplay.canvas",
+                "viewState": {
+                  "x": -72.63871251907908,
+                  "y": -64.87225787272872,
+                  "zoom": -0.30000000000000004
+                }
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a5dfee61391b3c80",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd07bdf9bc5e63a2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a452b54c0214fa75",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "59609046b1f92154",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0d7bfcfbf8ff2eca",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "74de196393a4598c",
+    "type": "split",
+    "children": [
+      {
+        "id": "14bd8e2a7c3d9232",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "102043b315c58205",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Core Gameplay.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "187d89bea9ede778",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Core Gameplay.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "17779fe7d3ada2df",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9d7f6ca590896023",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Core Gameplay.canvas"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "f25a76e5f9cade53",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "Core Gameplay.canvas",
+    "MODE Brainstorm.md"
+  ]
+}

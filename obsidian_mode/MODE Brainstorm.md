@@ -1,0 +1,1 @@
+Puzzle in 2D with Warioware style MODE changes. Every 4 seconds the MODE will change and become a new style of game and area to interact with. Puzzle elements will allow the player to interact with the MODE to change it or its behavior in a way to solve the challenges faced, such as hitting an orb that changes the MODE to a specific MODE that can be used to solve problems.
