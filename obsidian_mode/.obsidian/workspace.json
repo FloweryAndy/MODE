@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "0e9945956121d46c",
+        "id": "717ef0f6ed7b9310",
         "type": "tabs",
         "children": [
           {
-            "id": "f25a76e5f9cade53",
+            "id": "20e366f9502f2194",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "Core Gameplay.canvas",
                 "viewState": {
-                  "x": 38,
-                  "y": 381.19999999999993,
+                  "x": 61.666748046875,
+                  "y": 129.33331298828122,
                   "zoom": 0
                 }
               }
@@ -149,7 +149,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f25a76e5f9cade53",
+  "active": "20e366f9502f2194",
   "lastOpenFiles": [
     "Core Gameplay.canvas",
     "Untitled.md",
