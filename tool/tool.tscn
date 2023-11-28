@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ubb1w50cmjxb"]
+
+[node name="TOOL" type="Node2D"]
+
+[node name="DeathSickle" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="DeathSickle"]
+
+[node name="CorrosiveBombs" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CorrosiveBombs"]
+
+[node name="HeavySledgehammer" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="HeavySledgehammer"]
+
+[node name="FloatyUmbrella" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="FloatyUmbrella"]
+
+[node name="BigGun" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="BigGun"]
+
+[node name="SpiritLantern" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SpiritLantern"]
+
+[node name="WaterGun" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="WaterGun"]
+
+[node name="GoldenPickaxe" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="GoldenPickaxe"]
+
+[node name="GrappleGun" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="GrappleGun"]
+
+[node name="ShepherdCane" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ShepherdCane"]
+
+[node name="ShrinkRay" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ShrinkRay"]
+
+[node name="GravityGun" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="GravityGun"]
