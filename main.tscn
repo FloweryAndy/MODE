@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx821xmhsi0fu"]
+[gd_scene load_steps=5 format=3 uid="uid://dx821xmhsi0fu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_o8syx"]
 [ext_resource type="PackedScene" uid="uid://n3hlln4f5nan" path="res://character/player.tscn" id="2_6rt80"]
+[ext_resource type="PackedScene" uid="uid://dud5t1lxxfd7s" path="res://terrain/background.tscn" id="2_uum75"]
+[ext_resource type="TileSet" uid="uid://pvtqga841dow" path="res://level/terrain_tile_set.tres" id="3_c7i6r"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o8syx")
+does_mode_change = true
 
 [node name="ChangeModeTimer" type="Timer" parent="."]
 wait_time = 4.0
@@ -13,6 +16,13 @@ autostart = true
 [node name="Camera2D" type="Camera2D" parent="."]
 editor_draw_screen = false
 
+[node name="Background" parent="." instance=ExtResource("2_uum75")]
+
 [node name="Level" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Level"]
+tile_set = ExtResource("3_c7i6r")
+format = 2
+layer_0/tile_data = PackedInt32Array(65538, 0, 65536, 65537, 0, 65536, 65536, 0, 65536, 131071, 0, 65536, 131070, 0, 65536, 131069, 0, 65536, 458749, 0, 65536, 458750, 0, 65536, 458751, 0, 65536, 393216, 0, 65536, 393217, 0, 65536, 393218, 0, 65536, 393219, 0, 65536, 393220, 0, 65536, 393221, 0, 65536, 393222, 0, 65536, 393223, 0, 65536, 458748, 0, 65536, 458747, 0, 65536, 458746, 0, 65536, 458745, 0, 65536)
 
 [node name="Player" parent="." instance=ExtResource("2_6rt80")]

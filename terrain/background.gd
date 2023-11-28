@@ -2,7 +2,7 @@ extends ParallaxBackground
 
 #Parallaxes a background image which can change in terrain type.
 
-@onready var sprite2d: Sprite2D = $Sprite2D
+@onready var sprite2d: Sprite2D = $ParallaxLayer/Sprite2D
 
 
 func change_mode(new_terrain: int) -> void:

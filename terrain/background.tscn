@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dud5t1lxxfd7s"]
+[gd_scene load_steps=3 format=3 uid="uid://dud5t1lxxfd7s"]
 
 [ext_resource type="Script" path="res://terrain/background.gd" id="1_ratav"]
+[ext_resource type="Texture2D" uid="uid://dugk26bka6g2r" path="res://assets/art/background.png" id="2_a35bt"]
 
 [node name="Background" type="ParallaxBackground" groups=["change_mode"]]
 script = ExtResource("1_ratav")
@@ -8,3 +9,6 @@ script = ExtResource("1_ratav")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("2_a35bt")
+region_enabled = true
+region_rect = Rect2(0, 0, 2560, 720)
