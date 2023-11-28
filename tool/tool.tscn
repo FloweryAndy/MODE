@@ -1,51 +1,91 @@
-[gd_scene format=3 uid="uid://ubb1w50cmjxb"]
+[gd_scene load_steps=3 format=3 uid="uid://ubb1w50cmjxb"]
+
+[ext_resource type="Script" path="res://tool/tool.gd" id="1_ahbm4"]
+[ext_resource type="Texture2D" uid="uid://bwk23xudeymjg" path="res://assets/art/tool.png" id="1_j5xge"]
 
 [node name="TOOL" type="Node2D"]
+script = ExtResource("1_ahbm4")
 
 [node name="DeathSickle" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="DeathSickle"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
 
-[node name="CorrosiveBombs" type="Node2D" parent="."]
+[node name="CorrosiveBomb" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="CorrosiveBombs"]
+[node name="Sprite2D" type="Sprite2D" parent="CorrosiveBomb"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
 
 [node name="HeavySledgehammer" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="HeavySledgehammer"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 16)
 
 [node name="FloatyUmbrella" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="FloatyUmbrella"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 48, 16, 16)
 
-[node name="BigGun" type="Node2D" parent="."]
+[node name="BiggifyGun" type="Node2D" parent="." groups=["change_mode"]]
 
-[node name="Sprite2D" type="Sprite2D" parent="BigGun"]
+[node name="Sprite2D" type="Sprite2D" parent="BiggifyGun"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 64, 16, 16)
 
 [node name="SpiritLantern" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="SpiritLantern"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 80, 16, 16)
 
 [node name="WaterGun" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="WaterGun"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 96, 16, 16)
 
 [node name="GoldenPickaxe" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="GoldenPickaxe"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 112, 16, 16)
 
 [node name="GrappleGun" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="GrappleGun"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 128, 16, 16)
 
 [node name="ShepherdCane" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ShepherdCane"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 144, 16, 16)
 
 [node name="ShrinkRay" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ShrinkRay"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 160, 16, 16)
 
 [node name="GravityGun" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="GravityGun"]
+texture = ExtResource("1_j5xge")
+region_enabled = true
+region_rect = Rect2(0, 176, 16, 16)

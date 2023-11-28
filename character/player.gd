@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
-@onready var animation_player = $AnimationPlayer
-@onready var sprite2d = $Sprite2D
-
 @export var speed = 100
 @export var jump = 300
 @export var gravity = 500
+@onready var animation_player = $AnimationPlayer
+@onready var sprite2d = $Sprite2D
 
 
 func _ready() -> void:

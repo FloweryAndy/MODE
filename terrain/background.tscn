@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dud5t1lxxfd7s"]
+
+[ext_resource type="Script" path="res://terrain/background.gd" id="1_ratav"]
+
+[node name="Background" type="ParallaxBackground" groups=["change_mode"]]
+script = ExtResource("1_ratav")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]

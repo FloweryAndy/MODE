@@ -6,6 +6,10 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_o8syx")
 
+[node name="ChangeModeTimer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
 [node name="Camera2D" type="Camera2D" parent="."]
 editor_draw_screen = false
 
