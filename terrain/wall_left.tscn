@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://drbihy4cwk0uq"]
+
+[ext_resource type="Script" path="res://terrain/wall_left.gd" id="1_shjuu"]
+[ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="2_fu6sw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwybc"]
+size = Vector2(16, 16)
+
+[node name="WallLeft" type="StaticBody2D" groups=["change_mode"]]
+script = ExtResource("1_shjuu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["change_mode"]]
+texture = ExtResource("2_fu6sw")
+region_enabled = true
+region_rect = Rect2(112, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rwybc")

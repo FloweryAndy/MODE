@@ -12,9 +12,8 @@ script = ExtResource("1_nvocs")
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["change_mode"]]
 texture = ExtResource("2_3rmi5")
 hframes = 4
-vframes = 12
 region_enabled = true
-region_rect = Rect2(0, 0, 64, 192)
+region_rect = Rect2(0, 0, 64, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rwybc")

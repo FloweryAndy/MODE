@@ -7,6 +7,10 @@ extends StaticBody2D
 @onready var sprite2d: Sprite2D = $Sprite2D
 
 
+func _ready():
+	sprite2d.frame = randi_range(0, 3)
+
+
 func change_mode(new_terrain: int) -> void:
-	sprite2d.region_rect = Rect2(0, 16 * new_terrain, 64, 192)
+	sprite2d.region_rect = Rect2(0, 16 * new_terrain, 64, 16)
 	sprite2d.frame = randi_range(0, 3)
