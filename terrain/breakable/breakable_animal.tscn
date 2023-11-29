@@ -7,6 +7,8 @@
 size = Vector2(16, 16)
 
 [node name="BreakableAnimal" type="StaticBody2D" groups=["change_mode"]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_7au41")
 my_mode = 9
 

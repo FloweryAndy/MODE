@@ -1,10 +1,22 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://pvtqga841dow"]
+[gd_resource type="TileSet" load_steps=20 format=3 uid="uid://pvtqga841dow"]
 
 [ext_resource type="PackedScene" uid="uid://bvsan0nh6iv3" path="res://terrain/floor.tscn" id="1_jd3sr"]
 [ext_resource type="PackedScene" uid="uid://buo8e3p2ecwkx" path="res://terrain/wall_inner.tscn" id="2_1kclh"]
 [ext_resource type="PackedScene" uid="uid://drbihy4cwk0uq" path="res://terrain/wall_left.tscn" id="3_bg3in"]
 [ext_resource type="PackedScene" uid="uid://din7u22pdugqk" path="res://terrain/wall_top.tscn" id="4_iqong"]
 [ext_resource type="PackedScene" uid="uid://kjn14764fmgp" path="res://terrain/wall_right.tscn" id="5_uaeib"]
+[ext_resource type="PackedScene" uid="uid://cwjrql53ctkb4" path="res://terrain/breakable/breakable_grassy.tscn" id="6_aw82x"]
+[ext_resource type="PackedScene" uid="uid://pdo6h7ly0adp" path="res://terrain/breakable/breakable_animal.tscn" id="7_gsdse"]
+[ext_resource type="PackedScene" uid="uid://bmyky45robife" path="res://terrain/breakable/breakable_home.tscn" id="8_qqvlb"]
+[ext_resource type="PackedScene" uid="uid://dheo6p1jvted1" path="res://terrain/breakable/breakable_moon.tscn" id="9_3o20w"]
+[ext_resource type="PackedScene" uid="uid://da8sivs081h65" path="res://terrain/breakable/breakable_candy.tscn" id="10_mu3ll"]
+[ext_resource type="PackedScene" uid="uid://c8quwyic4bp4d" path="res://terrain/breakable/breakable_icy.tscn" id="11_542tq"]
+[ext_resource type="PackedScene" uid="uid://pajlcy82pu5h" path="res://terrain/breakable/breakable_tower.tscn" id="12_8mmgi"]
+[ext_resource type="PackedScene" uid="uid://bef71my0invt0" path="res://terrain/breakable/breakable_factory.tscn" id="13_2k84g"]
+[ext_resource type="PackedScene" uid="uid://bk7oorylqdo7o" path="res://terrain/breakable/breakable_dark.tscn" id="14_8nvd4"]
+[ext_resource type="PackedScene" uid="uid://bf8lct6b680hy" path="res://terrain/breakable/breakable_desert.tscn" id="15_wg7rj"]
+[ext_resource type="PackedScene" uid="uid://c5focigrolbmn" path="res://terrain/breakable/breakable_dwarven.tscn" id="16_54sov"]
+[ext_resource type="PackedScene" uid="uid://c4sdy075817hi" path="res://terrain/breakable/breakable_underwater.tscn" id="17_27y7k"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_n51ny"]
 resource_name = "Terrain"
@@ -14,5 +26,21 @@ scenes/3/scene = ExtResource("3_bg3in")
 scenes/4/scene = ExtResource("4_iqong")
 scenes/5/scene = ExtResource("5_uaeib")
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_md6ay"]
+resource_name = "Breakable"
+scenes/1/scene = ExtResource("6_aw82x")
+scenes/2/scene = ExtResource("10_mu3ll")
+scenes/3/scene = ExtResource("11_542tq")
+scenes/4/scene = ExtResource("12_8mmgi")
+scenes/5/scene = ExtResource("13_2k84g")
+scenes/6/scene = ExtResource("14_8nvd4")
+scenes/7/scene = ExtResource("15_wg7rj")
+scenes/8/scene = ExtResource("16_54sov")
+scenes/9/scene = ExtResource("17_27y7k")
+scenes/10/scene = ExtResource("7_gsdse")
+scenes/11/scene = ExtResource("8_qqvlb")
+scenes/12/scene = ExtResource("9_3o20w")
+
 [resource]
 sources/0 = SubResource("TileSetScenesCollectionSource_n51ny")
+sources/1 = SubResource("TileSetScenesCollectionSource_md6ay")

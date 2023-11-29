@@ -15,10 +15,10 @@ enum Tool {
 	GRAVITYGUN
 }
 @export var current_tool = Tool.DEATHSICKLE
-
 @export var can_act = true
-
 @export var is_swinging = false
+
+var current_mode = 0
 
 @onready var sprite2d: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -40,9 +40,10 @@ func _process(_delta):
 	set_rotation(global_position.direction_to(mouse_position).angle())
 
 
-func change_mode(new_terrain: int) -> void:
-	current_tool = Tool.values()[new_terrain]
-	sprite2d.region_rect = Rect2(0, new_terrain * 16, 64, 16)
+func change_mode(new_mode: int) -> void:
+	current_mode = new_mode
+	current_tool = Tool.values()[new_mode]
+	sprite2d.region_rect = Rect2(0, new_mode * 16, 64, 16)
 
 
 func swing() -> void:
