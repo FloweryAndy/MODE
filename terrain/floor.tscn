@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwybc"]
 size = Vector2(16, 16)
 
-[node name="Floor" type="StaticBody2D"]
+[node name="Floor" type="StaticBody2D" groups=["change_mode"]]
 script = ExtResource("1_nvocs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["change_mode"]]

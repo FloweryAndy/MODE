@@ -3,8 +3,9 @@ extends CharacterBody2D
 @export var speed = 100
 @export var jump = 300
 @export var gravity = 500
-@onready var animation_player = $AnimationPlayer
-@onready var sprite2d = $Sprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var sprite2d: Sprite2D = $Sprite2D
+@onready var respawn_point: Marker2D = $"../Level/RespawnPoint"
 
 
 func _ready() -> void:
@@ -15,6 +16,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
 	var direction = Input.get_axis("left", "right")
+	if global_position.y > 360:
+		respawn()
 	if direction:
 		sprite2d.flip_h = direction < 0
 	if direction:
@@ -25,3 +28,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -jump
 
 	move_and_slide()
+
+
+func respawn() -> void:
+	global_position = respawn_point.global_position
+
+
+func checkpoint(area) -> void:
+	respawn_point.global_position = area.global_position
