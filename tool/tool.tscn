@@ -116,7 +116,7 @@ _data = {
 "swing": SubResource("Animation_74rv6")
 }
 
-[node name="TOOL" type="Area2D" groups=["change_mode"]]
+[node name="TOOL" type="Area2D" groups=["change_mode", "tool"]]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_ahbm4")
