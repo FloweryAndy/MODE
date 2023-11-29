@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8quwyic4bp4d"]
+
+[ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_0hwyq"]
+[ext_resource type="Script" path="res://terrain/breakable/breakable.gd" id="1_nj1rt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jt0vi"]
+size = Vector2(16, 16)
+
+[node name="BreakableIcy" type="StaticBody2D" groups=["change_mode"]]
+script = ExtResource("1_nj1rt")
+my_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0hwyq")
+region_enabled = true
+region_rect = Rect2(128, 32, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jt0vi")
