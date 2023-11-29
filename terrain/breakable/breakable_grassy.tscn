@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwjrql53ctkb4"]
 
-[ext_resource type="Script" path="res://terrain/breakable/breakable_grassy.gd" id="1_1pn07"]
+[ext_resource type="Script" path="res://terrain/breakable/breakable.gd" id="1_1pn07"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_421af"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jt0vi"]

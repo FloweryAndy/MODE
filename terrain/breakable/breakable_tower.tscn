@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://pajlcy82pu5h"]
 
-[ext_resource type="Script" path="res://terrain/breakable/breakable_tower.gd" id="1_a5oj6"]
+[ext_resource type="Script" path="res://terrain/breakable/breakable.gd" id="1_a5oj6"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_dprm6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jt0vi"]
@@ -8,6 +8,7 @@ size = Vector2(16, 16)
 
 [node name="BreakableTower" type="StaticBody2D" groups=["change_mode"]]
 script = ExtResource("1_a5oj6")
+my_mode = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_dprm6")

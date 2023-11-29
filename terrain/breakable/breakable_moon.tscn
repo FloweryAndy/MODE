@@ -1,13 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://dheo6p1jvted1"]
 
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_jjdur"]
-[ext_resource type="Script" path="res://terrain/breakable/breakable_moon.gd" id="1_t11ye"]
+[ext_resource type="Script" path="res://terrain/breakable/breakable.gd" id="1_t11ye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jt0vi"]
 size = Vector2(16, 16)
 
 [node name="BreakableMoon" type="StaticBody2D" groups=["change_mode"]]
 script = ExtResource("1_t11ye")
+my_mode = 11
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_jjdur")

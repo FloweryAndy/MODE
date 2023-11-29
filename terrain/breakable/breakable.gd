@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var my_mode = 1
+@export var my_mode: int = 0
 @onready var sprite2d: Sprite2D = $Sprite2D
 
 
