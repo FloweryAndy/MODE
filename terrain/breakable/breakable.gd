@@ -6,7 +6,6 @@ extends StaticBody2D
 
 func _ready():
 	change_mode(0)
-	connect("body_entered", _on_body_entered)
 
 
 func change_mode(new_mode: int):
@@ -14,11 +13,5 @@ func change_mode(new_mode: int):
 	sprite2d.region_rect = Rect2(my_x, new_mode * 16, 16, 16)
 
 
-func _on_body_entered(body):
-	if body.is_in_group("tool"):
-		if body.current_mode == my_mode:
-			die()
-
-
-func die():
+func breakable():
 	queue_free()

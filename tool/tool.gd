@@ -2,7 +2,7 @@ extends Area2D
 
 enum Tool {
 	DEATHSICKLE,
-	CORROSIVEBOMB,
+	PEPPERMINTBOMB,
 	HEAVYSLEDGEHAMMER,
 	FLOATYUMBRELLA,
 	BIGGIFYGUN,
@@ -27,6 +27,7 @@ var current_mode = 0
 
 func _ready():
 	collision_shape2d.disabled = true
+	connect("body_entered", Callable(_on_body_entered))
 
 
 func _process(_delta):
@@ -61,7 +62,7 @@ func special() -> void:
 	match current_tool:
 		Tool.DEATHSICKLE:
 			pass
-		Tool.CORROSIVEBOMB:
+		Tool.PEPPERMINTBOMB:
 			pass
 		Tool.HEAVYSLEDGEHAMMER:
 			pass
@@ -84,3 +85,9 @@ func special() -> void:
 		Tool.GRAVITYGUN:
 			pass
 	can_act = true
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.has_method("breakable"):
+		if current_mode == body.my_mode:
+			body.breakable()
