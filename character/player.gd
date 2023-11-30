@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed = 100
 @export var jump = 300
 @export var gravity = 500
+@export var health = 100
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite2d: Sprite2D = $Sprite2D
 @onready var respawn_point: Marker2D = $"../Level/RespawnPoint"
@@ -28,6 +29,18 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -jump
 
 	move_and_slide()
+
+
+func change_mode(_new_mode: int) -> void:
+	pass
+
+
+func hurt(amount: int = 10, pos: Vector2 = global_position) -> void:
+	global_position += -global_position.direction_to(pos) * amount * .8
+	health -= amount
+	print_debug("health" + str(health))
+	if health <= 0:
+		respawn()
 
 
 func respawn() -> void:

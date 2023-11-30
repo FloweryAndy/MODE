@@ -10,7 +10,7 @@ script = ExtResource("1_o8syx")
 does_mode_change = true
 
 [node name="ChangeModeTimer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 10.0
 autostart = true
 
 [node name="Background" parent="." instance=ExtResource("2_uum75")]
