@@ -15,7 +15,7 @@ func _ready() -> void:
 	pass
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if shape_cast2d.is_colliding() and can_act and !expanded:
 		can_act = false
 		animation_player.play("expand")

@@ -2,7 +2,7 @@ extends Area2D
 
 enum Tool {
 	DEATHSICKLE,
-	CORROSIVEBOMB,
+	PEPPERMINTBOMB,
 	HEAVYSLEDGEHAMMER,
 	FLOATYUMBRELLA,
 	BIGGIFYGUN,
@@ -62,7 +62,7 @@ func special() -> void:
 	match current_tool:
 		Tool.DEATHSICKLE:
 			pass
-		Tool.CORROSIVEBOMB:
+		Tool.PEPPERMINTBOMB:
 			pass
 		Tool.HEAVYSLEDGEHAMMER:
 			pass
