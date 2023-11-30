@@ -1,27 +1,60 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgdbvoj4qg75y"]
+[gd_scene load_steps=8 format=3 uid="uid://dgdbvoj4qg75y"]
 
 [ext_resource type="Script" path="res://object/candy/chocolate_spikes.gd" id="1_78170"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="2_7e163"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7goj"]
-size = Vector2(16, 16)
+size = Vector2(16, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a7lxf"]
 size = Vector2(16, 4)
 
 [sub_resource type="Animation" id="Animation_uohae"]
 resource_name = "expand"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 1),
+"transitions": PackedFloat32Array(1e-05, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_582m8"]
+length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5ksfx"]
 _data = {
+"RESET": SubResource("Animation_582m8"),
 "expand": SubResource("Animation_uohae")
 }
 
 [node name="ChocolateSpikes" type="Area2D" groups=["change_mode"]]
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("1_78170")
+my_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 8)
 texture = ExtResource("2_7e163")
+offset = Vector2(0, -8)
 hframes = 2
 region_enabled = true
 region_rect = Rect2(224, 16, 32, 16)

@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=20 format=3 uid="uid://pvtqga841dow"]
+[gd_resource type="TileSet" load_steps=23 format=3 uid="uid://pvtqga841dow"]
 
 [ext_resource type="PackedScene" uid="uid://bvsan0nh6iv3" path="res://terrain/floor.tscn" id="1_jd3sr"]
 [ext_resource type="PackedScene" uid="uid://buo8e3p2ecwkx" path="res://terrain/wall_inner.tscn" id="2_1kclh"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bf8lct6b680hy" path="res://terrain/breakable/breakable_desert.tscn" id="15_wg7rj"]
 [ext_resource type="PackedScene" uid="uid://c5focigrolbmn" path="res://terrain/breakable/breakable_dwarven.tscn" id="16_54sov"]
 [ext_resource type="PackedScene" uid="uid://c4sdy075817hi" path="res://terrain/breakable/breakable_underwater.tscn" id="17_27y7k"]
+[ext_resource type="PackedScene" uid="uid://dgdbvoj4qg75y" path="res://object/candy/chocolate_spikes.tscn" id="18_l6loc"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_n51ny"]
 resource_name = "Terrain"
@@ -41,6 +42,15 @@ scenes/10/scene = ExtResource("7_gsdse")
 scenes/11/scene = ExtResource("8_qqvlb")
 scenes/12/scene = ExtResource("9_3o20w")
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_jqds6"]
+resource_name = "Grassy"
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_22l7f"]
+resource_name = "Candy"
+scenes/1/scene = ExtResource("18_l6loc")
+
 [resource]
 sources/0 = SubResource("TileSetScenesCollectionSource_n51ny")
 sources/1 = SubResource("TileSetScenesCollectionSource_md6ay")
+sources/2 = SubResource("TileSetScenesCollectionSource_jqds6")
+sources/3 = SubResource("TileSetScenesCollectionSource_22l7f")
