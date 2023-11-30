@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgdbvoj4qg75y"]
+[gd_scene load_steps=7 format=3 uid="uid://dgdbvoj4qg75y"]
 
 [ext_resource type="Script" path="res://object/candy/chocolate_spikes.gd" id="1_78170"]
+[ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="2_7e163"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7goj"]
 size = Vector2(16, 16)
@@ -20,6 +21,10 @@ _data = {
 script = ExtResource("1_78170")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7e163")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(224, 16, 32, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_c7goj")
