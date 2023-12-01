@@ -14,6 +14,8 @@ enum Terrain {
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite2d: Sprite2D = $Sprite2D
 @onready var respawn_point: Marker2D = $"../Level/RespawnPoint"
+@onready var collision_shape2d: CollisionShape2D = $CollisionShape2D
+@onready var canvas_modulate: CanvasModulate = $CanvasModulate
 
 
 func _ready() -> void:
@@ -60,7 +62,7 @@ func change_mode(new_mode: int) -> void:
 		Terrain.FACTORY:
 			speed = 100
 		Terrain.DARK:
-			pass
+			canvas_modulate.visible = false
 		Terrain.DESERT:
 			jump = 300
 		Terrain.DWARVEN:
@@ -74,6 +76,7 @@ func change_mode(new_mode: int) -> void:
 		Terrain.HOME:
 			pass
 		Terrain.MOON:
+			speed = 100
 			jump = 300
 			gravity = 500
 	current_mode = new_mode
@@ -90,7 +93,7 @@ func change_mode(new_mode: int) -> void:
 		Terrain.FACTORY:
 			speed = 120
 		Terrain.DARK:
-			pass
+			canvas_modulate.visible = true
 		Terrain.DESERT:
 			jump = 400
 		Terrain.DWARVEN:
@@ -104,6 +107,7 @@ func change_mode(new_mode: int) -> void:
 		Terrain.HOME:
 			pass
 		Terrain.MOON:
+			speed = 25
 			jump = 200
 			gravity = 200
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ubb1w50cmjxb"]
+[gd_scene load_steps=9 format=3 uid="uid://ubb1w50cmjxb"]
 
 [ext_resource type="Script" path="res://tool/tool.gd" id="1_ahbm4"]
 [ext_resource type="Texture2D" uid="uid://bwk23xudeymjg" path="res://assets/art/tool.png" id="1_j5xge"]
@@ -116,6 +116,15 @@ _data = {
 "swing": SubResource("Animation_74rv6")
 }
 
+[sub_resource type="Gradient" id="Gradient_3yowo"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4ho1q"]
+gradient = SubResource("Gradient_3yowo")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+
 [node name="TOOL" type="Area2D" groups=["change_mode", "tool"]]
 collision_layer = 2
 collision_mask = 2
@@ -136,3 +145,11 @@ shape = SubResource("RectangleShape2D_upww3")
 libraries = {
 "": SubResource("AnimationLibrary_falbn")
 }
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(6, 6)
+color = Color(1, 1, 0, 1)
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+texture = SubResource("GradientTexture2D_4ho1q")
+texture_scale = 2.0

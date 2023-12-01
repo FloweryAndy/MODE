@@ -23,9 +23,11 @@ var current_mode = 0
 @onready var sprite2d: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision_shape2d: CollisionShape2D = $CollisionShape2D
+@onready var point_light2d: PointLight2D = $PointLight2D
 
 
 func _ready():
+	point_light2d.visible = false
 	collision_shape2d.disabled = true
 	connect("body_entered", Callable(_on_body_entered))
 
@@ -42,9 +44,59 @@ func _process(_delta):
 
 
 func change_mode(new_mode: int) -> void:
+	match current_tool:
+		Tool.DEATHSICKLE:
+			pass
+		Tool.PEPPERMINTBOMB:
+			pass
+		Tool.HEAVYSLEDGEHAMMER:
+			pass
+		Tool.FLOATYUMBRELLA:
+			pass
+		Tool.BIGGIFYGUN:
+			pass
+		Tool.SPIRITLANTERN:
+			point_light2d.visible = false
+		Tool.WATERGUN:
+			pass
+		Tool.GOLDENPICKAXE:
+			pass
+		Tool.GRAPPLEGUN:
+			point_light2d.visible = false
+		Tool.SHEPHERDCANE:
+			pass
+		Tool.SHRINKRAY:
+			pass
+		Tool.GRAVITYGUN:
+			pass
 	current_mode = new_mode
 	current_tool = Tool.values()[new_mode]
 	sprite2d.region_rect = Rect2(0, new_mode * 16, 64, 16)
+	match current_tool:
+		Tool.DEATHSICKLE:
+			pass
+		Tool.PEPPERMINTBOMB:
+			pass
+		Tool.HEAVYSLEDGEHAMMER:
+			pass
+		Tool.FLOATYUMBRELLA:
+			pass
+		Tool.BIGGIFYGUN:
+			pass
+		Tool.SPIRITLANTERN:
+			point_light2d.visible = true
+		Tool.WATERGUN:
+			pass
+		Tool.GOLDENPICKAXE:
+			pass
+		Tool.GRAPPLEGUN:
+			point_light2d.visible = true
+		Tool.SHEPHERDCANE:
+			pass
+		Tool.SHRINKRAY:
+			pass
+		Tool.GRAVITYGUN:
+			pass
 
 
 func swing() -> void:
