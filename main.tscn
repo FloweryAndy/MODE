@@ -9,7 +9,17 @@
 background_mode = 3
 ambient_light_source = 1
 reflected_light_source = 1
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
 glow_enabled = true
+fog_enabled = true
+volumetric_fog_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 1.1
+adjustment_contrast = 1.05
+adjustment_saturation = 1.02
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o8syx")
@@ -36,13 +46,12 @@ drag_horizontal_offset = 1.0
 editor_draw_screen = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Player"]
-visible = false
 position = Vector2(100, -85)
 color = Color(0, 0, 0, 1)
 
 [node name="Light" type="DirectionalLight2D" parent="Player"]
 position = Vector2(100, -85)
-blend_mode = 2
+energy = 0.6
 shadow_enabled = true
 shadow_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
 height = 0.5

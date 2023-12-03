@@ -64,7 +64,6 @@ func change_mode(new_mode: int) -> void:
 		Terrain.FACTORY:
 			speed = 100
 		Terrain.DARK:
-			canvas_modulate.visible = false
 			light.visible = true
 			darklight.visible = false
 		Terrain.DESERT:
@@ -97,7 +96,6 @@ func change_mode(new_mode: int) -> void:
 		Terrain.FACTORY:
 			speed = 120
 		Terrain.DARK:
-			canvas_modulate.visible = true
 			light.visible = false
 			darklight.visible = true
 		Terrain.DESERT:
