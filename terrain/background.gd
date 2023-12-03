@@ -6,9 +6,10 @@ extends ParallaxBackground
 @onready var parallax_layer: ParallaxLayer = $ParallaxLayer
 
 
+func _ready():
+	parallax_layer.motion_scale.x = sprite2d.texture.get_width() * sprite2d.scale.x / 1280
+	parallax_layer.motion_mirroring.x = sprite2d.texture.get_width() * sprite2d.scale.x
+
+
 func change_mode(new_terrain: int) -> void:
 	sprite2d.region_rect = Rect2(0, 720 * new_terrain, 2560, 720)
-	if new_terrain == 3:
-		parallax_layer.motion_scale.x = 1280.0
-	else:
-		parallax_layer.motion_scale.x = 0.5
