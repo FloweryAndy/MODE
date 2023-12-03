@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://bts0vvgskfegv"]
+
+[ext_resource type="Script" path="res://object/grassy/vine.gd" id="1_8x1wt"]
+[ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_nhqiv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ta2t0"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ej63f"]
+size = Vector2(4, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihexm"]
+size = Vector2(4, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hg6t5"]
+size = Vector2(4, 5)
+
+[node name="Vine" type="Node2D" groups=["change_mode"]]
+script = ExtResource("1_8x1wt")
+
+[node name="Ceiling" type="StaticBody2D" parent="."]
+position = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling"]
+shape = SubResource("RectangleShape2D_ta2t0")
+debug_color = Color(0, 0.886275, 0.313726, 0.419608)
+
+[node name="PinJoint2D1" type="PinJoint2D" parent="."]
+position = Vector2(0, -8)
+node_a = NodePath("../Ceiling")
+node_b = NodePath("../Vine1")
+angular_limit_enabled = true
+angular_limit_lower = -0.523599
+angular_limit_upper = 0.523599
+motor_enabled = true
+motor_target_velocity = 1.0472
+
+[node name="Vine1" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Vine1"]
+texture = ExtResource("1_nhqiv")
+region_enabled = true
+region_rect = Rect2(176, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vine1"]
+shape = SubResource("RectangleShape2D_ej63f")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2(0, 8)
+node_a = NodePath("../Vine1")
+node_b = NodePath("../Vine2")
+angular_limit_enabled = true
+angular_limit_lower = -0.523599
+angular_limit_upper = 0.523599
+
+[node name="Vine2" type="RigidBody2D" parent="."]
+position = Vector2(0, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="Vine2"]
+texture = ExtResource("1_nhqiv")
+region_enabled = true
+region_rect = Rect2(176, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vine2"]
+shape = SubResource("RectangleShape2D_ihexm")
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2(0, 24)
+node_a = NodePath("../Vine2")
+node_b = NodePath("../Vine3")
+angular_limit_enabled = true
+angular_limit_lower = -0.523599
+angular_limit_upper = 0.523599
+
+[node name="Vine3" type="RigidBody2D" parent="."]
+position = Vector2(0, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="Vine3"]
+texture = ExtResource("1_nhqiv")
+region_enabled = true
+region_rect = Rect2(160, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vine3"]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_hg6t5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.9
+autostart = true

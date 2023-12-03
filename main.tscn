@@ -5,12 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://dud5t1lxxfd7s" path="res://terrain/background.tscn" id="2_uum75"]
 [ext_resource type="PackedScene" uid="uid://b6iw5txutultd" path="res://level/level1.tscn" id="3_rc7a8"]
 
-[sub_resource type="Environment" id="Environment_3kyt8"]
+[sub_resource type="Environment" id="Environment_mvs7t"]
 background_mode = 3
 ambient_light_source = 1
-ambient_light_sky_contribution = 0.0
-ambient_light_energy = 0.0
 reflected_light_source = 1
+glow_enabled = true
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o8syx")
@@ -21,14 +20,6 @@ wait_time = 10.0
 autostart = true
 
 [node name="Background" parent="." instance=ExtResource("2_uum75")]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_3kyt8")
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-shadow_enabled = true
-shadow_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
-height = 0.5
 
 [node name="Level" parent="." instance=ExtResource("3_rc7a8")]
 
@@ -48,3 +39,22 @@ editor_draw_screen = false
 visible = false
 position = Vector2(100, -85)
 color = Color(0, 0, 0, 1)
+
+[node name="Light" type="DirectionalLight2D" parent="Player"]
+position = Vector2(100, -85)
+blend_mode = 2
+shadow_enabled = true
+shadow_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+height = 0.5
+
+[node name="Darklight" type="DirectionalLight2D" parent="Player"]
+visible = false
+position = Vector2(100, -85)
+color = Color(0, 0, 0, 1)
+blend_mode = 2
+shadow_enabled = true
+shadow_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+height = 0.5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mvs7t")

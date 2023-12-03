@@ -69,8 +69,13 @@ change_mode={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="TOOL"
+2d_physics/layer_4="Player"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-anti_aliasing/quality/msaa_2d=2
 viewport/hdr_2d=true

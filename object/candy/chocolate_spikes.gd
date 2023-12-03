@@ -13,7 +13,7 @@ var expanded = false
 
 func _ready() -> void:
 	visible = false
-	monitoring = false
+	set_deferred("monitoring", false)
 	body_entered.connect(_on_body_entered)
 
 
@@ -25,14 +25,14 @@ func _process(_delta: float) -> void:
 			animation_player.play("expand")
 			await animation_player.animation_finished
 			if visible:
-				monitoring = true
+				set_deferred("monitoring", true)
 			expanded = true
 			can_act = true
 		elif !shape_cast2d.is_colliding() and can_act and expanded:
 			await get_tree().create_timer(0.5).timeout
 			can_act = false
 			animation_player.play_backwards("expand")
-			monitoring = false
+			set_deferred("monitoring", false)
 			await animation_player.animation_finished
 			expanded = false
 			can_act = true
@@ -42,11 +42,11 @@ func change_mode(new_mode: int) -> void:
 	if new_mode == my_mode:
 		visible = true
 	else:
-		monitoring = false
+		set_deferred("monitoring", false)
 		visible = false
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.hurt(10, sprite2d.global_position)
-		monitoring = false
+		set_deferred("monitoring", false)

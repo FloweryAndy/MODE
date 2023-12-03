@@ -16,6 +16,8 @@ enum Terrain {
 @onready var respawn_point: Marker2D = $"../Level/RespawnPoint"
 @onready var collision_shape2d: CollisionShape2D = $CollisionShape2D
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
+@onready var light: DirectionalLight2D = $Light
+@onready var darklight: DirectionalLight2D = $Darklight
 
 
 func _ready() -> void:
@@ -63,6 +65,8 @@ func change_mode(new_mode: int) -> void:
 			speed = 100
 		Terrain.DARK:
 			canvas_modulate.visible = false
+			light.visible = true
+			darklight.visible = false
 		Terrain.DESERT:
 			jump = 300
 		Terrain.DWARVEN:
@@ -94,6 +98,8 @@ func change_mode(new_mode: int) -> void:
 			speed = 120
 		Terrain.DARK:
 			canvas_modulate.visible = true
+			light.visible = false
+			darklight.visible = true
 		Terrain.DESERT:
 			jump = 400
 		Terrain.DWARVEN:
