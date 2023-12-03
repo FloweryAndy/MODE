@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2a2aesf343tq"]
+
+[ext_resource type="Script" path="res://object/dark/ghost.gd" id="1_o0ic5"]
+[ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_r51ij"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dxtah"]
+radius = 8.0
+
+[sub_resource type="Gradient" id="Gradient_4bwx6"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2qi3e"]
+gradient = SubResource("Gradient_4bwx6")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.6, 0)
+
+[node name="Ghost" type="Area2D" groups=["change_mode"]]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_o0ic5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r51ij")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(224, 80, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dxtah")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = SubResource("GradientTexture2D_2qi3e")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+navigation_layers = 32
