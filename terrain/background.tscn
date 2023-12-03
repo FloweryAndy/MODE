@@ -7,11 +7,10 @@
 script = ExtResource("1_ratav")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0.5, 0.5)
+motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(845.531, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(128, 56)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_a35bt")
 region_enabled = true

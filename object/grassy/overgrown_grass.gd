@@ -37,10 +37,11 @@ func breakable() -> void:
 
 
 func _on_start_growing_timer_timeout():
-	if animation_player.current_animation_position > 0:
-		animation_player.play()
-	else:
-		animation_player.play("Grow")
+	if animation_player.current_animation_position != null:
+		if animation_player.current_animation_position > 0:
+			animation_player.play()
+		else:
+			animation_player.play("Grow")
 
 
 func _on_finished_growing(_anim):
