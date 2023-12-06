@@ -30,6 +30,7 @@ region_rect = Rect2(224, 80, 32, 16)
 shape = SubResource("CircleShape2D_dxtah")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.627451, 0.894118, 0.964706, 1)
 texture = SubResource("GradientTexture2D_2qi3e")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
