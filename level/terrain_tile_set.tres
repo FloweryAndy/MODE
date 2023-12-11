@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=36 format=3 uid="uid://pvtqga841dow"]
+[gd_resource type="TileSet" load_steps=37 format=3 uid="uid://pvtqga841dow"]
 
 [ext_resource type="PackedScene" uid="uid://bvsan0nh6iv3" path="res://terrain/floor.tscn" id="1_jd3sr"]
 [ext_resource type="PackedScene" uid="uid://buo8e3p2ecwkx" path="res://terrain/wall_inner.tscn" id="2_1kclh"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dgdbvoj4qg75y" path="res://object/candy/chocolate_spikes.tscn" id="18_l6loc"]
 [ext_resource type="Script" path="res://object/grassy/overgrown_grass.gd" id="19_b3532"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="20_2snwm"]
+[ext_resource type="PackedScene" uid="uid://dp1d7lukfyrut" path="res://object/candy/bubblegum.tscn" id="22_n3im5"]
 [ext_resource type="PackedScene" uid="uid://b2a2aesf343tq" path="res://object/dark/ghost.tscn" id="22_yv66p"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_n51ny"]
@@ -157,6 +158,7 @@ scenes/2/scene = SubResource("PackedScene_g0fi2")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_22l7f"]
 resource_name = "Candy"
 scenes/1/scene = ExtResource("18_l6loc")
+scenes/2/scene = ExtResource("22_n3im5")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_rl0wg"]
 resource_name = "Icy"

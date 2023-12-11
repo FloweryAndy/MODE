@@ -4,13 +4,15 @@ enum Terrain {
 	GRASSY, CANDY, ICY, TOWER, FACTORY, DARK, DESERT, DWARVEN, UNDERWATER, ANIMAL, HOME, MOON
 }
 
-@export var speed = 100
-@export var jump = 300
-@export var drag = 1.0
-@export var gravity = 500
-@export var health = 100
-@export var current_mode = 0
-@export var current_terrain = Terrain.GRASSY
+@export var speed: int = 100
+@export var jump: int = 300
+@export var drag: float = 1.0
+@export var gravity: int = 500
+@export var health: int = 100
+@export var current_mode: int = 0
+@export var current_terrain: Terrain = Terrain.GRASSY
+@export var sticky: bool = false
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite2d: Sprite2D = $Sprite2D
 @onready var respawn_point: Marker2D = $"../Level/RespawnPoint"
@@ -33,7 +35,11 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		sprite2d.flip_h = direction < 0
 	if direction:
-		velocity.x = direction * speed
+		if sticky:
+			velocity.x = clamp(velocity.x, -15, 15)
+			velocity.x += direction * speed * delta
+		else:
+			velocity.x = direction * speed
 		if current_terrain == Terrain.TOWER:
 			velocity.x -= 50
 	else:
@@ -46,7 +52,10 @@ func _physics_process(delta: float) -> void:
 		Input.is_action_just_pressed("jump") and is_on_floor()
 		or Input.is_action_just_pressed("jump") and current_terrain == Terrain.UNDERWATER
 	):
-		velocity.y = -jump
+		if sticky:
+			velocity.y = -jump * .5
+		else:
+			velocity.y = -jump
 
 	move_and_slide()
 

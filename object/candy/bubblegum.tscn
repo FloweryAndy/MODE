@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp1d7lukfyrut"]
+
+[ext_resource type="Script" path="res://object/candy/bubblegum.gd" id="1_wasyn"]
+[ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="2_hnyo3"]
+[ext_resource type="Script" path="res://object/candy/sticky.gd" id="3_05dkr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trbg2"]
+size = Vector2(20, 4)
+
+[node name="Bubblegum" type="Area2D" groups=["change_mode"]]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_wasyn")
+my_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hnyo3")
+region_enabled = true
+region_rect = Rect2(192, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_trbg2")
+
+[node name="Sticky" type="RayCast2D" parent="."]
+position = Vector2(0, 7)
+scale = Vector2(0.25, 0.25)
+target_position = Vector2(0, -20)
+collision_mask = 8
+hit_from_inside = true
+script = ExtResource("3_05dkr")
+my_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Sticky"]
+z_index = 1
+position = Vector2(0, -5)
+texture = ExtResource("2_hnyo3")
+region_enabled = true
+region_rect = Rect2(208, 16, 16, 16)

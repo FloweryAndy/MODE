@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ubb1w50cmjxb" path="res://tool/tool.tscn" id="3_wvxeu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqwgk"]
-size = Vector2(8, 7)
+size = Vector2(8, 13)
 
 [node name="Player" type="CharacterBody2D" groups=["change_mode", "player"]]
 collision_layer = 9
@@ -16,7 +16,7 @@ script = ExtResource("1_lu63v")
 texture = ExtResource("1_hj3n4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7.5)
+position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_aqwgk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
