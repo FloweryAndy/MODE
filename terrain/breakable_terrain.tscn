@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://rljkqhc62ylf"]
+
+[ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_o2qhq"]
+[ext_resource type="PackedScene" uid="uid://dnl7dbkapj1kp" path="res://components/change_mode_sprite.tscn" id="2_ai2pq"]
+[ext_resource type="PackedScene" uid="uid://c1uyqykqo36k1" path="res://components/breakable.tscn" id="3_hltgp"]
+[ext_resource type="PackedScene" uid="uid://con5djo7d5nrr" path="res://components/mode.tscn" id="4_ymuir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jt0vi"]
+size = Vector2(16, 16)
+
+[node name="BreakableTerrain" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_o2qhq")
+region_enabled = true
+region_rect = Rect2(144, 0, 16, 16)
+
+[node name="ChangeModeSprite" parent="Sprite2D" instance=ExtResource("2_ai2pq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jt0vi")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_jt0vi")
+
+[node name="Breakable" parent="." instance=ExtResource("3_hltgp")]
+
+[node name="Mode" parent="." instance=ExtResource("4_ymuir")]

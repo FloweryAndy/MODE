@@ -23,7 +23,6 @@ adjustment_saturation = 1.02
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o8syx")
-does_mode_change = true
 
 [node name="ChangeModeTimer" type="Timer" parent="."]
 wait_time = 10.0

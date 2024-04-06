@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bts0vvgskfegv"]
+[gd_scene load_steps=9 format=3 uid="uid://bts0vvgskfegv"]
 
 [ext_resource type="Script" path="res://object/grassy/vine.gd" id="1_8x1wt"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_nhqiv"]
+[ext_resource type="PackedScene" uid="uid://con5djo7d5nrr" path="res://components/mode.tscn" id="3_nvkjc"]
+[ext_resource type="PackedScene" uid="uid://d1l0f5fffttdp" path="res://components/change_mode_visible.tscn" id="4_wv7vf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ta2t0"]
 size = Vector2(16, 16)
@@ -15,7 +17,7 @@ size = Vector2(4, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hg6t5"]
 size = Vector2(4, 5)
 
-[node name="Vine" type="Node2D" groups=["change_mode"]]
+[node name="Vine" type="Node2D"]
 script = ExtResource("1_8x1wt")
 
 [node name="Ceiling" type="StaticBody2D" parent="."]
@@ -45,6 +47,10 @@ region_rect = Rect2(176, 0, 16, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Vine1"]
 shape = SubResource("RectangleShape2D_ej63f")
 
+[node name="Mode" parent="Vine1" instance=ExtResource("3_nvkjc")]
+
+[node name="ChangeModeVisible" parent="Vine1" instance=ExtResource("4_wv7vf")]
+
 [node name="PinJoint2D2" type="PinJoint2D" parent="."]
 position = Vector2(0, 8)
 node_a = NodePath("../Vine1")
@@ -63,6 +69,10 @@ region_rect = Rect2(176, 0, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Vine2"]
 shape = SubResource("RectangleShape2D_ihexm")
+
+[node name="Mode" parent="Vine2" instance=ExtResource("3_nvkjc")]
+
+[node name="ChangeModeVisible" parent="Vine2" instance=ExtResource("4_wv7vf")]
 
 [node name="PinJoint2D3" type="PinJoint2D" parent="."]
 position = Vector2(0, 24)
@@ -84,6 +94,14 @@ region_rect = Rect2(160, 0, 16, 16)
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_hg6t5")
 
+[node name="Mode" parent="Vine3" instance=ExtResource("3_nvkjc")]
+
+[node name="ChangeModeVisible" parent="Vine3" instance=ExtResource("4_wv7vf")]
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.9
 autostart = true
+
+[node name="Mode" parent="." instance=ExtResource("3_nvkjc")]
+
+[node name="ChangeModeVisible" parent="." instance=ExtResource("4_wv7vf")]

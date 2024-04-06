@@ -1,17 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dp1d7lukfyrut"]
+[gd_scene load_steps=7 format=3 uid="uid://dp1d7lukfyrut"]
 
 [ext_resource type="Script" path="res://object/candy/bubblegum.gd" id="1_wasyn"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="2_hnyo3"]
 [ext_resource type="Script" path="res://object/candy/sticky.gd" id="3_05dkr"]
+[ext_resource type="PackedScene" uid="uid://d1l0f5fffttdp" path="res://components/change_mode_visible.tscn" id="4_djamw"]
+[ext_resource type="PackedScene" uid="uid://con5djo7d5nrr" path="res://components/mode.tscn" id="5_6w7xt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trbg2"]
 size = Vector2(20, 4)
 
-[node name="Bubblegum" type="Area2D" groups=["change_mode"]]
+[node name="Bubblegum" type="Area2D"]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_wasyn")
-my_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_hnyo3")
@@ -29,7 +30,6 @@ target_position = Vector2(0, -20)
 collision_mask = 8
 hit_from_inside = true
 script = ExtResource("3_05dkr")
-my_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Sticky"]
 z_index = 1
@@ -37,3 +37,15 @@ position = Vector2(0, -5)
 texture = ExtResource("2_hnyo3")
 region_enabled = true
 region_rect = Rect2(208, 16, 16, 16)
+
+[node name="ChangeModeVisible" parent="Sticky" instance=ExtResource("4_djamw")]
+visible_on_mode = true
+
+[node name="Mode" parent="Sticky" instance=ExtResource("5_6w7xt")]
+my_mode = 1
+
+[node name="ChangeModeVisible" parent="." instance=ExtResource("4_djamw")]
+visible_on_mode = true
+
+[node name="Mode" parent="." instance=ExtResource("5_6w7xt")]
+my_mode = 1

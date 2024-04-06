@@ -1,14 +1,13 @@
 extends Node
-
-@export var does_mode_change: bool = false
-
-var current_mode: int = 0
-
+@export var does_mode_change: bool = true
+var current_mode: int = 12
 @onready var change_mode_timer: Timer = $ChangeModeTimer
 
 
 func _ready() -> void:
 	change_mode_timer.timeout.connect(change_mode)
+	await get_tree().process_frame
+	change_mode()
 
 
 func _input(event):
@@ -28,9 +27,11 @@ func change_mode_debug() -> void:
 			i.change_mode(current_mode)
 
 
-func change_mode() -> void:
+#change_mode 12 means randomize
+func change_mode(new_mode: int = 12) -> void:
 	if does_mode_change:
-		var new_mode = randi_range(0, 11)
+		if new_mode == 12:
+			new_mode = randi_range(0, 11)
 		if new_mode == current_mode:
 			change_mode()
 		else:

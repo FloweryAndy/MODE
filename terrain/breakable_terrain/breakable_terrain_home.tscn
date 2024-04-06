@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqaah5dgt56ep"]
+
+[ext_resource type="PackedScene" uid="uid://rljkqhc62ylf" path="res://terrain/breakable_terrain.tscn" id="1_e0dbb"]
+
+[node name="BreakableTerrainHome" instance=ExtResource("1_e0dbb")]
+
+[node name="Sprite2D" parent="." index="0"]
+region_rect = Rect2(144, 160, 16, 16)
+
+[node name="Mode" parent="." index="4"]
+my_mode = 10

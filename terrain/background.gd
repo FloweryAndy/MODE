@@ -1,7 +1,5 @@
 extends ParallaxBackground
-
 #Parallaxes a background image which can change in terrain type.
-
 @onready var sprite2d: Sprite2D = $ParallaxLayer/Sprite2D
 @onready var parallax_layer: ParallaxLayer = $ParallaxLayer
 

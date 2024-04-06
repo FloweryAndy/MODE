@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1uyqykqo36k1"]
+
+[ext_resource type="Script" path="res://components/breakable.gd" id="1_s7abj"]
+
+[node name="Breakable" type="Node"]
+script = ExtResource("1_s7abj")

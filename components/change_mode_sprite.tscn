@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnl7dbkapj1kp"]
+
+[ext_resource type="Script" path="res://components/change_mode_sprite.gd" id="1_sq08y"]
+
+[node name="ChangeModeSprite" type="Node" groups=["change_mode"]]
+script = ExtResource("1_sq08y")

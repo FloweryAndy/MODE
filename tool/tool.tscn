@@ -1,7 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ubb1w50cmjxb"]
+[gd_scene load_steps=12 format=3 uid="uid://ubb1w50cmjxb"]
 
 [ext_resource type="Script" path="res://tool/tool.gd" id="1_ahbm4"]
 [ext_resource type="Texture2D" uid="uid://bwk23xudeymjg" path="res://assets/art/tool.png" id="1_j5xge"]
+[ext_resource type="PackedScene" uid="uid://con5djo7d5nrr" path="res://components/mode.tscn" id="3_6aek7"]
+[ext_resource type="PackedScene" uid="uid://d1l0f5fffttdp" path="res://components/change_mode_visible.tscn" id="3_mgadf"]
+[ext_resource type="PackedScene" uid="uid://dnl7dbkapj1kp" path="res://components/change_mode_sprite.tscn" id="3_prxb4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upww3"]
 size = Vector2(7, 7)
@@ -137,9 +140,15 @@ hframes = 4
 region_enabled = true
 region_rect = Rect2(0, 0, 64, 16)
 
+[node name="ChangeModeSprite" parent="Sprite2D" instance=ExtResource("3_prxb4")]
+off_mode_x = 0
+on_mode_x = 0
+has_frames = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8.5, -1.5)
 shape = SubResource("RectangleShape2D_upww3")
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -153,3 +162,11 @@ shadow_enabled = true
 shadow_color = Color(0, 0, 0, 1)
 texture = SubResource("GradientTexture2D_4ho1q")
 texture_scale = 2.0
+
+[node name="ChangeModeVisible" parent="PointLight2D" instance=ExtResource("3_mgadf")]
+
+[node name="Mode" parent="PointLight2D" instance=ExtResource("3_6aek7")]
+multi_mode = true
+multi_mode_modes = Array[bool]([false, false, false, false, false, true, false, false, false, false, false, true])
+
+[node name="Mode" parent="." instance=ExtResource("3_6aek7")]

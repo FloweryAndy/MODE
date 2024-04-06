@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1l0f5fffttdp"]
+
+[ext_resource type="Script" path="res://components/change_mode_visible.gd" id="1_bjq4u"]
+
+[node name="ChangeModeVisible" type="Node" groups=["change_mode"]]
+script = ExtResource("1_bjq4u")

@@ -1,19 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvsan0nh6iv3"]
 
-[ext_resource type="Script" path="res://terrain/floor.gd" id="1_nvocs"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="2_3rmi5"]
+[ext_resource type="PackedScene" uid="uid://bxrp28cm8sxan" path="res://components/terrain_sprite.tscn" id="2_q6dsi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwybc"]
 size = Vector2(16, 16)
 
 [node name="Floor" type="StaticBody2D" groups=["change_mode"]]
-script = ExtResource("1_nvocs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["change_mode"]]
 texture = ExtResource("2_3rmi5")
 hframes = 4
 region_enabled = true
 region_rect = Rect2(0, 0, 64, 16)
+
+[node name="TerrainSprite" parent="Sprite2D" instance=ExtResource("2_q6dsi")]
+is_floor = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rwybc")

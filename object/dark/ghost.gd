@@ -3,7 +3,6 @@ extends Area2D
 @export var speed = 64
 @export var jump = 300
 @export var drag = 1.0
-@export var current_mode = 0
 var target_position: Vector2
 var player: Node2D
 @onready var sprite2d: Sprite2D = $Sprite2D
@@ -13,8 +12,6 @@ var player: Node2D
 
 
 func _ready():
-	if current_mode != 5:
-		visible = false
 	player = get_tree().get_first_node_in_group("player")
 	target_position = player.position
 	navigation_agent2d.target_position = target_position
@@ -29,24 +26,8 @@ func _physics_process(delta):
 		var direction = global_position.direction_to(navigation_agent2d.get_next_path_position())
 		var velocity = direction * speed * delta
 		global_position += velocity
-		if direction.x < 0:
-			sprite2d.flip_h = true
-		else:
-			sprite2d.flip_h = false
-		if direction.y > 0:
-			sprite2d.frame = 0
-		else:
-			sprite2d.frame = 1
-
-
-func change_mode(new_mode: int) -> void:
-	current_mode = new_mode
-	if new_mode == 5:
-		visible = true
-		set_deferred("monitoring", true)
-	else:
-		visible = false
-		set_deferred("monitoring", false)
+		sprite2d.flip_h = direction.x < 0
+		sprite2d.frame = direction.y < 0
 
 
 func _on_body_entered(body):

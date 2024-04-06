@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxrp28cm8sxan"]
+
+[ext_resource type="Script" path="res://components/terrain_sprite.gd" id="1_wafwp"]
+
+[node name="TerrainSprite" type="Node" groups=["change_mode"]]
+script = ExtResource("1_wafwp")

@@ -1,18 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://buo8e3p2ecwkx"]
+[gd_scene load_steps=5 format=3 uid="uid://buo8e3p2ecwkx"]
 
-[ext_resource type="Script" path="res://terrain/wall_inner.gd" id="1_dqlcu"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="2_1tgre"]
+[ext_resource type="PackedScene" uid="uid://bxrp28cm8sxan" path="res://components/terrain_sprite.tscn" id="2_m0kah"]
+
+[sub_resource type="GDScript" id="GDScript_3gxoe"]
+script/source = "extends StaticBody2D
+
+@onready var sprite2d: Sprite2D = $Sprite2D
+
+
+func change_mode(new_terrain: int) -> void:
+	sprite2d.region_rect = Rect2(sprite2d.region_rect.position.x, 16 * new_terrain, 16, 16)
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwybc"]
 size = Vector2(16, 16)
 
 [node name="WallInner" type="StaticBody2D" groups=["change_mode"]]
-script = ExtResource("1_dqlcu")
+script = SubResource("GDScript_3gxoe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["change_mode"]]
 texture = ExtResource("2_1tgre")
 region_enabled = true
 region_rect = Rect2(64, 0, 16, 16)
+
+[node name="TerrainSprite" parent="Sprite2D" instance=ExtResource("2_m0kah")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rwybc")

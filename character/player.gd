@@ -1,18 +1,12 @@
 extends CharacterBody2D
-
-enum Terrain {
-	GRASSY, CANDY, ICY, TOWER, FACTORY, DARK, DESERT, DWARVEN, UNDERWATER, ANIMAL, HOME, MOON
-}
-
+enum Terrain { GRASSY, CANDY, ICY, TOWER, FACTORY, DARK, DESERT, DWARVEN, UNDERWATER, ANIMAL, HOME, MOON }
 @export var speed: int = 100
 @export var jump: int = 300
 @export var drag: float = 1.0
 @export var gravity: int = 500
 @export var health: int = 100
-@export var current_mode: int = 0
 @export var current_terrain: Terrain = Terrain.GRASSY
 @export var sticky: bool = false
-
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite2d: Sprite2D = $Sprite2D
 @onready var respawn_point: Marker2D = $"../Level/RespawnPoint"
@@ -48,15 +42,11 @@ func _physics_process(delta: float) -> void:
 		else:
 			drag = speed
 		velocity.x = move_toward(velocity.x, 0, drag)
-	if (
-		Input.is_action_just_pressed("jump") and is_on_floor()
-		or Input.is_action_just_pressed("jump") and current_terrain == Terrain.UNDERWATER
-	):
+	if Input.is_action_just_pressed("jump") and is_on_floor() or Input.is_action_just_pressed("jump") and current_terrain == Terrain.UNDERWATER:
 		if sticky:
 			velocity.y = -jump * .5
 		else:
 			velocity.y = -jump
-
 	move_and_slide()
 
 
@@ -91,7 +81,6 @@ func change_mode(new_mode: int) -> void:
 			speed = 100
 			jump = 300
 			gravity = 500
-	current_mode = new_mode
 	current_terrain = Terrain.values()[new_mode]
 	match current_terrain:
 		Terrain.GRASSY:

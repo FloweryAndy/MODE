@@ -1,26 +1,24 @@
-[gd_resource type="TileSet" load_steps=37 format=3 uid="uid://pvtqga841dow"]
+[gd_resource type="TileSet" load_steps=30 format=3 uid="uid://pvtqga841dow"]
 
 [ext_resource type="PackedScene" uid="uid://bvsan0nh6iv3" path="res://terrain/floor.tscn" id="1_jd3sr"]
 [ext_resource type="PackedScene" uid="uid://buo8e3p2ecwkx" path="res://terrain/wall_inner.tscn" id="2_1kclh"]
 [ext_resource type="PackedScene" uid="uid://drbihy4cwk0uq" path="res://terrain/wall_left.tscn" id="3_bg3in"]
 [ext_resource type="PackedScene" uid="uid://din7u22pdugqk" path="res://terrain/wall_top.tscn" id="4_iqong"]
 [ext_resource type="PackedScene" uid="uid://kjn14764fmgp" path="res://terrain/wall_right.tscn" id="5_uaeib"]
-[ext_resource type="PackedScene" uid="uid://cwjrql53ctkb4" path="res://terrain/breakable/breakable_grassy.tscn" id="6_aw82x"]
-[ext_resource type="PackedScene" uid="uid://pdo6h7ly0adp" path="res://terrain/breakable/breakable_animal.tscn" id="7_gsdse"]
-[ext_resource type="PackedScene" uid="uid://bmyky45robife" path="res://terrain/breakable/breakable_home.tscn" id="8_qqvlb"]
-[ext_resource type="PackedScene" uid="uid://dheo6p1jvted1" path="res://terrain/breakable/breakable_moon.tscn" id="9_3o20w"]
-[ext_resource type="PackedScene" uid="uid://da8sivs081h65" path="res://terrain/breakable/breakable_candy.tscn" id="10_mu3ll"]
-[ext_resource type="PackedScene" uid="uid://c8quwyic4bp4d" path="res://terrain/breakable/breakable_icy.tscn" id="11_542tq"]
-[ext_resource type="PackedScene" uid="uid://pajlcy82pu5h" path="res://terrain/breakable/breakable_tower.tscn" id="12_8mmgi"]
-[ext_resource type="PackedScene" uid="uid://bef71my0invt0" path="res://terrain/breakable/breakable_factory.tscn" id="13_2k84g"]
-[ext_resource type="PackedScene" uid="uid://bk7oorylqdo7o" path="res://terrain/breakable/breakable_dark.tscn" id="14_8nvd4"]
-[ext_resource type="PackedScene" uid="uid://bf8lct6b680hy" path="res://terrain/breakable/breakable_desert.tscn" id="15_wg7rj"]
-[ext_resource type="PackedScene" uid="uid://c5focigrolbmn" path="res://terrain/breakable/breakable_dwarven.tscn" id="16_54sov"]
-[ext_resource type="PackedScene" uid="uid://c4sdy075817hi" path="res://terrain/breakable/breakable_underwater.tscn" id="17_27y7k"]
+[ext_resource type="PackedScene" uid="uid://c2omb2oo6wgkt" path="res://terrain/breakable_terrain/breakable_terrain_grassy.tscn" id="6_5rdx5"]
+[ext_resource type="PackedScene" uid="uid://n4h8ly7hrivg" path="res://terrain/breakable_terrain/breakable_terrain_animal.tscn" id="7_btu7b"]
+[ext_resource type="PackedScene" uid="uid://cqaah5dgt56ep" path="res://terrain/breakable_terrain/breakable_terrain_home.tscn" id="8_kit4p"]
+[ext_resource type="PackedScene" uid="uid://b2frq4f5xqjix" path="res://terrain/breakable_terrain/breakable_terrain_moon.tscn" id="9_ab6pc"]
+[ext_resource type="PackedScene" uid="uid://dbdp5hirle075" path="res://terrain/breakable_terrain/breakable_terrain_candy.tscn" id="10_1ft4f"]
+[ext_resource type="PackedScene" uid="uid://dl0apt0m28mqe" path="res://terrain/breakable_terrain/breakable_terrain_icy.tscn" id="11_er2yy"]
+[ext_resource type="PackedScene" uid="uid://dtgp7r23bthw0" path="res://terrain/breakable_terrain/breakable_terrain_tower.tscn" id="12_ycevo"]
+[ext_resource type="PackedScene" uid="uid://brb5ykra2d3am" path="res://terrain/breakable_terrain/breakable_terrain_factory.tscn" id="13_6f2wf"]
+[ext_resource type="PackedScene" uid="uid://c1aq6vkamwh6b" path="res://terrain/breakable_terrain/breakable_terrain_dark.tscn" id="14_tj1ll"]
+[ext_resource type="PackedScene" uid="uid://dcd0r6cto8v4x" path="res://terrain/breakable_terrain/breakable_terrain_desert.tscn" id="15_4b6bj"]
+[ext_resource type="PackedScene" uid="uid://bljex5xh5ss0m" path="res://terrain/breakable_terrain/breakable_terrain_dwarven.tscn" id="16_2c3ut"]
+[ext_resource type="PackedScene" uid="uid://bkyqakn2otabp" path="res://terrain/breakable_terrain/breakable_terrain_underwater.tscn" id="17_i4onj"]
 [ext_resource type="PackedScene" uid="uid://bts0vvgskfegv" path="res://object/grassy/vine.tscn" id="18_hhumy"]
 [ext_resource type="PackedScene" uid="uid://dgdbvoj4qg75y" path="res://object/candy/chocolate_spikes.tscn" id="18_l6loc"]
-[ext_resource type="Script" path="res://object/grassy/overgrown_grass.gd" id="19_b3532"]
-[ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="20_2snwm"]
 [ext_resource type="PackedScene" uid="uid://dp1d7lukfyrut" path="res://object/candy/bubblegum.tscn" id="22_n3im5"]
 [ext_resource type="PackedScene" uid="uid://b2a2aesf343tq" path="res://object/dark/ghost.tscn" id="22_yv66p"]
 
@@ -32,128 +30,24 @@ scenes/3/scene = ExtResource("3_bg3in")
 scenes/4/scene = ExtResource("4_iqong")
 scenes/5/scene = ExtResource("5_uaeib")
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_md6ay"]
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_pu6lg"]
 resource_name = "Breakable"
-scenes/1/scene = ExtResource("6_aw82x")
-scenes/2/scene = ExtResource("10_mu3ll")
-scenes/3/scene = ExtResource("11_542tq")
-scenes/4/scene = ExtResource("12_8mmgi")
-scenes/5/scene = ExtResource("13_2k84g")
-scenes/6/scene = ExtResource("14_8nvd4")
-scenes/7/scene = ExtResource("15_wg7rj")
-scenes/8/scene = ExtResource("16_54sov")
-scenes/9/scene = ExtResource("17_27y7k")
-scenes/10/scene = ExtResource("7_gsdse")
-scenes/11/scene = ExtResource("8_qqvlb")
-scenes/12/scene = ExtResource("9_3o20w")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qptfv"]
-size = Vector2(16, 16)
-
-[sub_resource type="Animation" id="Animation_kuodl"]
-resource_name = "growing"
-length = 8.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 0.1), Vector2(1, 2.25)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_yc27q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 0.1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_seqh1"]
-_data = {
-"Grow": SubResource("Animation_kuodl"),
-"RESET": SubResource("Animation_yc27q")
-}
-
-[sub_resource type="PackedScene" id="PackedScene_g0fi2"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("OvergrownGrass", "StaticBody2D", "breakable", "change_mode", "collision_layer", "collision_mask", "script", "Sprite2D", "Sprite2D", "position", "scale", "texture", "offset", "hframes", "region_enabled", "region_rect", "CollisionShape2D", "CollisionShape2D", "shape", "disabled", "RayCast2D", "RayCast2D", "target_position", "AnimationPlayer", "AnimationPlayer", "libraries", "StartGrowingTimer", "Timer", "wait_time", "one_shot"),
-"node_count": 6,
-"node_paths": [NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath(".")],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 3, 4, 0, 5, 1, 6, 2, 2, 2, 3, 1073741824, 0, 8, 7, -1, 7, 9, 3, 10, 4, 11, 5, 12, 6, 13, 7, 14, 8, 15, 9, 0, 1073741825, 0, 17, 16, -1, 2, 18, 10, 19, 11, 0, 1073741826, 0, 21, 20, -1, 1, 22, 12, 0, 1073741827, 0, 24, 23, -1, 1, 25, 13, 0, 1073741828, 0, 27, 26, -1, 2, 28, 14, 29, 15, 0),
-"variants": [3, 3, ExtResource("19_b3532"), Vector2(0, 8), Vector2(1, 0.1), ExtResource("20_2snwm"), Vector2(0, -8), 2, true, Rect2(192, 0, 32, 16), SubResource("RectangleShape2D_qptfv"), true, Vector2(0, -16), {
-"": SubResource("AnimationLibrary_seqh1")
-}, 2.0, true],
-"version": 3
-}
+scenes/1/scene = ExtResource("6_5rdx5")
+scenes/2/scene = ExtResource("10_1ft4f")
+scenes/3/scene = ExtResource("11_er2yy")
+scenes/4/scene = ExtResource("12_ycevo")
+scenes/5/scene = ExtResource("13_6f2wf")
+scenes/6/scene = ExtResource("14_tj1ll")
+scenes/7/scene = ExtResource("15_4b6bj")
+scenes/8/scene = ExtResource("16_2c3ut")
+scenes/9/scene = ExtResource("17_i4onj")
+scenes/10/scene = ExtResource("7_btu7b")
+scenes/11/scene = ExtResource("8_kit4p")
+scenes/12/scene = ExtResource("9_ab6pc")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_jqds6"]
 resource_name = "Grassy"
 scenes/1/scene = ExtResource("18_hhumy")
-scenes/2/scene = SubResource("PackedScene_g0fi2")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_22l7f"]
 resource_name = "Candy"
@@ -175,10 +69,10 @@ scenes/1/scene = ExtResource("22_yv66p")
 
 [resource]
 sources/0 = SubResource("TileSetScenesCollectionSource_n51ny")
-sources/1 = SubResource("TileSetScenesCollectionSource_md6ay")
 sources/2 = SubResource("TileSetScenesCollectionSource_jqds6")
 sources/3 = SubResource("TileSetScenesCollectionSource_22l7f")
 sources/4 = SubResource("TileSetScenesCollectionSource_rl0wg")
 sources/5 = SubResource("TileSetScenesCollectionSource_6kmx6")
 sources/6 = SubResource("TileSetScenesCollectionSource_25r5w")
 sources/7 = SubResource("TileSetScenesCollectionSource_jf2gy")
+sources/1 = SubResource("TileSetScenesCollectionSource_pu6lg")

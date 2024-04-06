@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2a2aesf343tq"]
+[gd_scene load_steps=8 format=3 uid="uid://b2a2aesf343tq"]
 
 [ext_resource type="Script" path="res://object/dark/ghost.gd" id="1_o0ic5"]
 [ext_resource type="Texture2D" uid="uid://cwxu1kfu5tdl7" path="res://assets/art/terrain.png" id="1_r51ij"]
+[ext_resource type="PackedScene" uid="uid://con5djo7d5nrr" path="res://components/mode.tscn" id="3_d00p6"]
+[ext_resource type="PackedScene" uid="uid://d1l0f5fffttdp" path="res://components/change_mode_visible.tscn" id="4_0pxai"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dxtah"]
 radius = 8.0
@@ -34,3 +36,8 @@ texture = SubResource("GradientTexture2D_2qi3e")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 navigation_layers = 32
+
+[node name="Mode" parent="." instance=ExtResource("3_d00p6")]
+my_mode = 5
+
+[node name="ChangeModeVisible" parent="." instance=ExtResource("4_0pxai")]
